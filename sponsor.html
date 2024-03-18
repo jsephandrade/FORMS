@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sponsor Registration</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    margin-left: 450px;
+    margin-right: 450px;
+    background-color: #C07F00;
+}
+
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    padding: 30px;
+    background-color: #4C3D3D;
+    border-top-right-radius: 30px;
+    color: #FFF7D4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.805);
+}
+
+.container {
+    padding: 10px;
+    background-color: #FAEAB1;
+    border-end-start-radius: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+form {
+    font-size: 20px;
+}
+
+label {
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+#Q1, #Q2, #Q3, #Q4, #Q5, #Q6, #Q7, #Q8, #Q9, #Q10, #Q11, #Q12, #Q13, #Q14, #Q15, #Q16 {
+    padding: 10px;
+}
+
+#Q15 label {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+textarea {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    font-size: 15px;
+    border-top-right-radius: 30px;
+    border-end-start-radius: 30px;
+}
+
+input {
+    width: 13rem;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    font-size: 15px;
+}
+#Q4 input {
+    width: 75%;
+}
+
+input[type="submit"] {
+    background-color: #4C3D3D;
+    color: #FFF7D4;
+    border: 1px solid gray;
+    font-size: 17px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-top-right-radius: 15px;
+    border-end-start-radius: 15px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#home {
+    background-color: #4C3D3D;
+    border: 1px solid gray;
+    padding: 14px 20px 14px 20px;
+    font-size: 17px;
+    color: #FFF7D4;
+    border-top-left-radius: 5px;
+    border-end-end-radius: 5px;
+    border-top-right-radius: 15px;
+    border-end-start-radius: 15px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+    </style>
+  </head>
+  <body>
+    <h1>Sponsor Registration</h1>
+    <div class="container">
+      <form>
+        <form id="Q1" action="#">
+          <label for="prefix">Prefix</label>
+          <input type="text" id="prefix" name="prefix" required/>
+        </form>
+        <form id="Q2" action="#">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="firstname"
+            placeholder="First Name"
+          />
+          <input type="text" name="lastname" placeholder="Last Name" />
+        </form>
+        <form id="Q3" action="#">
+          <label for="pronouns">Preferred Pronouns</label>
+          <input type="text" id="pronouns" name="pronouns" />
+        </form>
+        <form id="Q4" action="#">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="sample@example.com"
+          />
+        </form>
+        <form id="Q5" action="#">
+          <label for="workphone">Work Phone</label>
+          <input type="tel" id="workphone" name="workphone" />
+        </form>
+        <form id="Q6" action="#">
+          <label for="cellphone">Cell Phone</label>
+          <input type="tel" id="cellphone" name="cellphone" />
+        </form>
+        <form id="Q7" action="#">
+          <label for="jobtitle">Job Title</label>
+          <input type="text" id="jobtitle" name="jobtitle" />
+        </form>
+        <form id="Q8" action="#">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" />
+        </form>
+        <form id="Q9" action="#">
+          <label for="businessaddress">Full Business Address</label>
+          <input id="businessaddress" name="businessaddress"></input>
+        </form>
+        <form id="Q10" action="#">
+          <label for="website">Company Website</label>
+          <input type="url" id="website" name="website" />
+        </form>
+        <form id="Q11" action="#">
+          <label for="companydescription">Company Description</label>
+          <br><textarea id="companydescription" name="companydescription" placeholder="Type here..."></textarea>
+        </form>
+        <form id="Q12" action="#">
+          <label for="facebook">Company Facebook Page</label>
+          <input type="url" id="facebook" name="facebook">
+        </form>
+        <form id="Q13" action="#">
+          <label for="twitter">Company Twitter Handle</label>
+          <input type="text" id="twitter" name="twitter">
+        </form>
+        <form id="Q14" action="#">
+          <label for="linkedin">Company LinkedIn Handle</label>
+          <input type="text" id="linkedin" name="linkedin">
+        </form>
+        <form id="Q15" action="#">
+          <label>Sponsorship Level</label>
+          <label for="gold"><input type="radio" id="gold" name="sponsorship_level" value="gold">Gold</label>
+          <label for="diamond"><input type="radio" id="diamond" name="sponsorship_level" value="diamond">Diamond</label>
+          <label for="platinum"><input type="radio" id="platinum" name="sponsorship_level" value="platinum">Platinum</label>
+        </form>
+        <form id="Q16" action="#">
+          <label for="additionalguests">Additional Guests (name, email)</label>
+          <br><textarea id="additionalguests" name="additionalguests" placeholder="Type here..."></textarea>
+        </form>
+        <input type="submit" value="Submit">
+        <a id="home" href="home.html">Return Home</a>
+      </form>
+    </div>
+
+  </body>
+</html>

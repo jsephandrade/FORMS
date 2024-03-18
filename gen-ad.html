@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>General Admission Registration</title>
+    <style>
+      
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url(bg1.jpg);
+    color: #114232;
+  }
+  
+  .form-container {
+    background-color: #FBFADA;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-header {
+    color: #FBF9F1;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #114232;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: start;
+    
+  }
+  .form-col:first-of-type {
+    border-right: 2px solid;
+  }
+
+  .form-group1, .form-group2, .form-group3, .form-group4, .form-group5 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .form-group6, .form-group7, .form-group8, .form-group9, .form-group10 {
+    padding: 20px;
+  }
+
+.form-group1 input {
+  margin-left: 10px;
+  width: 42%;
+}
+.form-group2 input, .form-group4 input {
+  margin-left: 7px;
+  width: 85.5%;
+}
+.form-group3 input, .form-group6 input, .form-group7 input{
+  margin-left: 30px;
+}
+.form-group5 input {
+  width: 100%;
+}
+
+.form-group3 label:nth-of-type(2),
+.form-group3 label:nth-of-type(3),
+.form-group6 label:nth-of-type(2),
+.form-group6 label:nth-of-type(3),
+.form-group7 label:nth-of-type(2),
+.form-group7 label:nth-of-type(3),
+.form-group7 label:nth-of-type(4){
+  margin-left: 10px;
+}
+
+input[type="radio"] {
+  height: 15px;
+  width: 15px;
+}
+input[type="text"], input[type="tel"] {
+  padding: 10px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  margin-top: 50px;
+}
+input[type="submit"],
+button[type="reset"],
+button[type="button"] {
+  width: calc(50% - 10px); 
+  padding: 12px;
+  border: none;
+  background-color: #114232;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+input[type="submit"]:hover,
+button[type="reset"]:hover,
+button[type="button"]:hover {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+input:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-header">
+        <h1>General Admission Registration</h1>
+      </div>
+      <form action="#" method="post">
+        <div class="form-row">
+          <div class="form-col">
+              <div class="form-group1">
+                 <label for="fullname">Name</label>
+                 <input type="text" name="firstname" id="_firstname" placeholder="First">
+                 <input type="text" name="lastname" id="_lastname" placeholder="Last">
+              </div>            
+            
+            <div class="form-group2">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="_email" placeholder="sample@example.com">
+            </div>
+            <div class="form-group3">
+              <label for="">Gender</label>
+              <input type="radio" name="male" id="_male">
+              <label for="male">Male</label>
+              <input type="radio" name="female" id="_female">
+              <label for="female">Female</label>
+            </div>
+            <div class="form-group4">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group5">
+              <label for="emergency-contact">Emergency Contact</label>
+              <input type="text" id="emergency-contact" name="emergency_contact" required>
+            </div>
+            <div class="form-group6">
+              <label>Do you require parking?</label><br><br>
+              <label><input type="radio" name="parking" value="yes" required> Yes</label>
+              <label><input type="radio" name="parking" value="no" required> No</label>
+            </div>
+            <div class="form-group7">
+              <label>What is your room preference?</label><br><br>
+          <label><input type="radio" name="room_preference" value="single" required> Single Room</label><br>
+          <label><input type="radio" name="room_preference" value="shared" required> Shared Room</label><br>
+          <label><input type="radio" name="room_preference" value="none" required> No Room Needed</label>
+            </div>
+          </div>
+
+
+
+          <div class="form-col">
+            <div class="form-group8">
+              <label>Do you have dietary restrictions?</label><br><br>
+              <label><input type="radio" name="dietary_restrictions" value="none" required> None</label><br>
+              <label><input type="radio" name="dietary_restrictions" value="vegetarian" required> Vegetarian</label><br>
+              <label><input type="radio" name="dietary_restrictions" value="gluten" required> Gluten Allergy</label><br>
+              <label><input type="radio" name="dietary_restrictions" value="lactose" required> Lactose Allergy</label><br>
+              <label><input type="radio" name="dietary_restrictions" value="nut" required> Nut Allergy</label><br>
+              <label><input type="radio" name="dietary_restrictions" value="shellfish" required> Shellfish Allergy</label>
+            </div>
+            <div class="form-group9">
+              <label>What activities will you attend?</label><br><br>
+              <label><input type="radio" name="activities" value="awards_gala_dinner" required> Awards Gala Dinner</label><br>
+              <label><input type="radio" name="activities" value="luncheon" required> Luncheon</label><br>
+              <label><input type="radio" name="activities" value="town_hall" required> Town Hall</label>
+            </div>
+            <div class="form-group10">
+              <label>Do you want to see the list of other attendees and their profiles on the official event app?</label><br><br>
+              <label><input type="radio" name="view_attendees" value="yes" required> Yes</label><br>
+              <label><input type="radio" name="view_attendees" value="no" required> No</label>
+            </div>
+          </div>
+        </div>
+        <div class="button-group">
+          <input type="submit" value="Submit" />
+          <button type="reset" class="reset-button">Reset</button>
+      <button type="button" class="home-button" onclick="window.location.href='home.html'">Home</button>
+        </div>
+  </div>
+      </form>
+    </div>
+  </body>
+</html>
